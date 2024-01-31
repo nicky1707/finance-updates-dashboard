@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% load static %}
+{% block content %}
+{% include 'header.html' %}
+{% if news > 0 %}
+{% include 'article.html' %}
+{% else %}
+{% include 'create_new.html' %}
+{% endif %}
+{% include 'footer.html' %}
+{% endblock content %}

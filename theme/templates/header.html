@@ -1,0 +1,46 @@
+<header class="">
+  <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8 dark:text-white">
+    <div class="flex items-center justify-between gap-4">
+      <div class="flex">
+        <a href="/" class="block shrink-0">
+          <img alt="Man" src="https://cdn4.iconfinder.com/data/icons/business-finance-vol-12-2/512/4-1024.png"
+            class="h-9 w-8" />
+          <!-- <a href="/" class="ml-2 text-gray-800 text text-lg font-bold"></a> -->
+        </a>
+      </div>
+      <div class="flex items-center gap-4">
+        <!-- Search bar-->
+        <form class="relative group " method="get" action="{% url 'search' %}" onsubmit="return validateForm()">
+          {% csrf_token %}
+          <label class="sr-only" for="search"> Search </label>
+
+          <input
+            class="dark:bg-stone-600 dark:text-zinc-300 h-10 w-full hover:bg-slate-100 rounded-full border-none bg-white pe-10 ps-4 text-sm shadow-sm sm:w-56"
+            id="form-check" type="search" placeholder="" name="q" />
+          <!-- search icon -->
+          <button type="button"
+            class="dark:bg-stone-800 dark:text-zinc-300 absolute group-hover:right-6 transition-all duration-100 end-1 top-1/2 -translate-y-1/2 rounded-full bg-gray-50 p-2 text-gray-600 hover:text-gray-700">
+            <span class="sr-only dark:bg-stone-800">Search</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 dark:bg-stone-800" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
+        </form>
+        <!-- settings icon -->
+        <a href="#" class="dark:bg-stone-800 block shrink-0 rounded-full bg-white p-2.5 text-gray-500 shadow-sm hover:text-gray-600 hover:rotate-180 transition-all duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-settings">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path
+              d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+            </path>
+          </svg>
+        </a>
+
+        
+      </div>
+    </div>
+  </div>
+</header>

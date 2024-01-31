@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% load static %} 
+{% block content %}
+{% include 'header.html' %}
+{% if news|length > 0 %}
+{% include 'hero.html' %}
+{% include 'article.html' %}
+{% else %}
+{% include 'create_new.html' %} 
+{% endif %}
+{% include 'footer.html' %}
+{% endblock content %}

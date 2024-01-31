@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block content %} {% include 'header.html' %}
+<!--====== form =====-->
+
+<div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-lg text-center">
+    <h1 class="text-2xl font-bold sm:text-3xl">Create a Industry</h1>
+
+    <p class="mt-4 text-gray-500"></p>
+  </div>
+
+  <form
+    action="{% url 'create_industry' %}"
+    class="mx-auto mb-0 mt-8 max-w-md space-y-4"
+    method="POST"
+  >
+    {% csrf_token %}
+    <div>
+      <div class="relative">
+        <input
+          type="text"
+          class="w-full rounded-lg border-gray-200 p-4 text-gray-500 pe-12 text-sm shadow-sm"
+          placeholder="Industry name"
+          name="industry_name"
+        />
+      </div>
+
+      <div class="flex-col py-4 items-center justify-between">
+        <button
+          type="submit"
+          class="w-full inline-block rounded-lg bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br px-5 py-3 text-sm font-medium text-white"
+        >
+          Create
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+{% include 'footer.html' %} {% endblock content %}
