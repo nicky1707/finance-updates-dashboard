@@ -1,0 +1,6 @@
+django
+requests
+beautifulsoup4
+lxml
+django-tailwind
+django-browser-reload
